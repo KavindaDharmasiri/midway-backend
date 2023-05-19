@@ -11,6 +11,11 @@ app = Flask(__name__)
 CORS(app)
 
 
+@app.route('/')
+def index():
+    return "hello"
+
+
 def create_connection():
     # Establish the database connection
     connection1 = connection.connect(host='database-midway.cnjonpzevrxo.us-east-1.rds.amazonaws.com',user='admin', password='root1234', database= 'midway')
